@@ -52,7 +52,8 @@
 
     /* ==== z-index === */
     --z-tooltip: 10;
-    --z-fixed: 100;
+    --z-fixed: 20;
+    --z-fixed-30: 30;
 
     /*  ===  Hover overlay  === */
     --img-transition: .3s;
@@ -79,6 +80,20 @@ body::-webkit-scrollbar-thumb {
 background-color: var(--text-color-light);    /* color of the scroll thumb */
 border-radius: 20px;       /* roundness of the scroll thumb */
 border: 3px solid var(--first-color);  /* creates padding around scroll thumb */
+}
+
+
+/* ======  Loading Screen  ======  .:.*/
+.loading-screen {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--first-color);
+    z-index: var(--z-fixed-30);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
 }
 
 

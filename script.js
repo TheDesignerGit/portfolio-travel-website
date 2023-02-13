@@ -222,3 +222,15 @@ sr.reveal(`.about__img-overlay, .video__content, .subscribe__form`, {
     origin: 'right',
     interval: 100,
 }) 
+
+
+// === Remove loading screen ..: === 
+const overlay = document.querySelector('.loading-screen')
+document.addEventListener('DOMContentLoaded', ()=>{
+    setTimeout( ()=> {
+        overlay.style.display = 'none'
+        // const firstDot = document.querySelector(".indicatorContainer > div:nth-child(1)")
+        // gotoSlide(firstDot)
+        }, 50)
+    }
+)
