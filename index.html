@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--  ===  FAVICON, REMIX ICONS, SWIPER === .:. -->
-    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAF7SURBVHgB7Zc9SMNAGIbfqFSIUBHSCmr9gSKWFpcOQgfBRTtk8A+7dJIqOAhCB8FBFHH0ZxGEgrsiLjrYycFBcK7gVvyZWgcNGpAOMRcoOLS53uVKl3sgWXJf8tx9b7hE0WbTFlpIG1qMFJACHRBAdGQIxrcJSwHeS2WmWs8rsKLPIKNPY6BXw+PpIVjxJEBmvruchhe4BUKBAM42N+AVLgG/quJybwuhoAavcAkcr68KeTiXQDY1j+REHKJgEiCJz6bmIJKGBUQknltAVOK5BEQmnktAZOKZBUQnvhZ1NyN/l2qfLRycX4FGofgKXtrVsfGdWhd+KxUYpolwfx9oBHu6kYhGnDeFkIhFnIPUlz+/XGtdt+O30geWpiaZMkDaVq3N3eSp410zYPyYWNzed27GAhm/YNeRehp1W/Bf4uLuHp0+H+KjYdDIXeexdnRCXfoqCst/AWlFRk86vY4NDzpBJYKF4gsenp7tJb9taNbcAs1AfhVLASnwB6AZbLeryaY4AAAAAElFTkSuQmCC" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
             <!-- add to Anki -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link defer rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <!-- ====CSS ====  .:. -->
-    
+    <link rel="stylesheet" href="styles.css">
     
     <title>Responsive Travel Website</title>
-  <script type="module" crossorigin src="/assets/index-c1bcbc43.js"></script>
-  <link rel="stylesheet" href="/assets/index-3107dacf.css">
 </head>
 
 <body data-scroll-container>
@@ -522,8 +520,29 @@
     </a>
 
     <!-- ============= Javascript .:.   =============== -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./js/locomotive-scroll.min.js"></script>
+    <script>
+        (function () {
+            var scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
+            })
+
+            const overlay = document.querySelector('.loading-screen')
+            document.addEventListener('DOMContentLoaded', ()=>{
+                setTimeout( ()=> {
+                    overlay.style.display = 'none'
+                    // const firstDot = document.querySelector(".indicatorContainer > div:nth-child(1)")
+                    // gotoSlide(firstDot)
+                    }, 50)
+    }
+)
+        })();
+    </script>
     
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
 </body> 
 </html>
