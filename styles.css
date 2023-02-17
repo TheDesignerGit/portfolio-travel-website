@@ -1,6 +1,7 @@
 /*  === Google Fonts ===  ..: */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Rubik:wght@300;400;500&display=swap');
 @import url('./css/locomotive-scroll.css');
+@import url('./css/media-queries.css');
     /* add to Anki, 5*s */
 
 
@@ -64,6 +65,16 @@
 
     --shadow-5: 0 20px 25px hsla(var(--hue-color), 64%, 22%, .5);
     --shadow-2: 0 20px 25px hsla(var(--hue-color), 64%, 22%, .2);
+
+    /* == animation === */
+    --cubic-in-out: cubic-bezier(.52,.03,.33,.97); 
+    --cubic-out: cubic-bezier(.64,.02,.33,.97);
+
+    --transition-3: opacity 3s ease;
+    --transition-5: opacity 6s ease;
+    --transition-8: opacity 8s ease;
+    --transition-10: opacity 10s ease;
+    
 }
 
 
@@ -83,6 +94,30 @@
 }
 
 
+/* Animations  .:. */
+.animate-from-left {
+    opacity: 1;
+}
+.animate-from-right {
+    opacity: 1;
+}
+.animate-from-top {
+    opacity: 1;
+}
+
+
+.section__title {
+    opacity: 1;
+    transition: var(--transition-5),
+}
+
+.home__data-title {
+    opacity: 1;
+    transition: var(--transition-3),
+}
+
+
+
 /* Large screen font sizing  .:. */
 @media screen and (min-width: 968px) {
     :root {
@@ -95,6 +130,7 @@
         --smaller-font-size: .813rem;
     }
 }
+    /* add to Anki, 10*s - responsive text */
 
 /* Dark theme Variables  .:. */
 body.dark-theme {
@@ -908,6 +944,8 @@ input {
 ::-webkit-scrollbar-thumb::hover {
     background-color: var(--text-color-light);
 }
+
+
 
 
 

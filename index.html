@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <!-- ====CSS ====  .:. -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/media-queries.css">
     
     <title>Responsive Travel Website</title>
 </head>
@@ -39,7 +40,7 @@
     </div>  
 
 <!-- ===== HEADER =====  :.. -->
-    <header class="header" id="header">
+    <header data-scroll-section class="header" id="header">
         <div id="header-bg" style="opacity: 0;"></div>
 
         <nav class="nav container">
@@ -82,18 +83,21 @@
 <!-- ======= MAIN :.. ========= -->
     <main class="main">
         <!-- ============= Home .:.   =============== -->
-        <section class="home" id="home">
+        <section data-scroll-section class="home" id="home">
             <img src="./img/home1.webp" alt="home" class="home__img">
             <div class="home__container container grid">
                 <div class="home__data">
-                    <span class="home__data-subtitle">Discover Your Place</span> 
-                    <h1 class="home__data-title">
+                    <span data-scroll data-scroll-speed="3" class="home__data-subtitle">Discover Your Place</span> 
+                    <h1 data-scroll data-scroll-speed="1" 
+                        data-scroll-class="animate-from-left"
+                        data-scroll-repeat="true"
+                        class="home__data-title">
                         Explore The <br> Most <b> Beautiful <br>  Beaches </b>
                     </h1>
-                    <a href="#" class="button">Explore</a>
+                    <a data-scroll data-scroll-speed="3" href="#" class="button">Explore</a>
                 </div>
 
-                <div class="home__social">
+                <div data-scroll data-scroll-speed="1" class="home__social">
                     <a href="#" target="_blank" class="home__social-link">
                         <i class="ri-facebook-box-fill"></i>  
                     </a>
@@ -107,7 +111,7 @@
                     </a>
                 </div>
 
-                <div class="home__info">
+                <div data-scroll data-scroll-speed="4" class="home__info">
                     <div>
                         <span class="home__info-title">5 Best Places to Visit</span>
                         <a href="#" class="button button-flex button--link home__info-button">
@@ -123,24 +127,31 @@
         </section>
 
         <!-- ============= About  .:.   =============== -->
-        <section class="about section" id="about">
+        <section data-scroll-section class="about section" id="about">
             <div class="about__container container grid">
                 <div class="about__data">
-                    <h2 class="section__title about__title">
+                    <h2 data-scroll 
+                        data-scroll-speed="1"
+                        data-scroll-class="animate-from-left"
+                        data-scroll-delay="0.10"
+                        class="section__title about__title">
                         Book Your Ticket <br> To A World of Adventure
                     </h2>
-                    <p class="about__description">
+                    <p data-scroll data-scroll-speed="1" class="about__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ea similique assumenda ipsum et omnis perspiciatis mollitia, repellendus quia dolorum asperiores eos dolore ad excepturi nihil necessitatibus, ullam est accusamus.
                     </p>
-                    <a href="#" class="button buttonShadow">Reserve A Place</a>
+                    <a data-scroll data-scroll-speed="2" href="#" class="button buttonShadow">Reserve A Place</a>
                             <!-- add to Anki, styled <a> tag as a button-->
                 </div>
 
                 <div class="about__img">
-                    <div class="about__img-overlay">
+                    <div data-scroll data-scroll-speed="-1" class="about__img-overlay">
                         <img src="./img/about1.webp" alt="about" class="about__img-one">
                     </div>
-                    <div class="about__img-overlay">
+                    <div 
+                        data-scroll data-scroll-speed="2" 
+                        data-scroll-delay="0.60"
+                        class="about__img-overlay">
                         <img src="./img/about2.webp" alt="about" class="about__img-two">
                     </div>
 
@@ -149,7 +160,7 @@
         </section>        
 
         <!-- ============= Discover Section .:.   =============== -->
-        <section class="discover section" id="discover">
+        <section data-scroll-section class="discover section" id="discover">
             <h2 class="section__title">
                 Discover The Most <br> Breathtaking Places
                         <!-- add to Anki, using  <br> for line breaks -->
@@ -202,7 +213,7 @@
         </section>
 
         <!-- ============= Experience .:.   =============== -->
-        <section class="experience section" id="experience">
+        <section data-scroll-section class="experience section" id="experience">
             <h2 class="section__title">
                 Our World Class Experience <br> Guarantees You Perfection
             </h2>
@@ -240,7 +251,7 @@
         </section>
 
         <!-- ============= Video .:.   =============== -->
-        <section class="video section" id="video">
+        <section data-scroll-section class="video section" id="video">
             <h2 class="section__title">Video Tour</h2>
             <div class="video__container container">
                 <p class="video__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid eaque quibusdam nihil doloremque quasi minima d</p>
@@ -259,7 +270,7 @@
         </section>
 
         <!-- ============= Places .:.   =============== -->
-        <section class="place section" id="place">
+        <section data-scroll-section class="place section" id="place">
             <h2 class="section__title">Choose Your Adventure</h2>
             <div class="place__container container grid">
                 
@@ -377,7 +388,7 @@
         </section>
 
         <!-- ============= Subscribe .:.   =============== -->
-        <section class="subscribe section">
+        <section data-scroll-section class="subscribe section">
             <div class="subscribe__bg">
                 <div class="subscribe__container container">
                     <h2 class="section__title subscribe__title">
@@ -394,7 +405,7 @@
         </section>
 
         <!-- ============= Sponsors .:.   =============== -->
-        <section class="sponsor section">
+        <section data-scroll-section class="sponsor section">
             <div class="sponsor__container container grid">
                 
                 <div class="sponsor__content">
@@ -525,7 +536,10 @@
         (function () {
             var scroll = new LocomotiveScroll({
             el: document.querySelector('[data-scroll-container]'),
-            smooth: true
+            smooth: true,
+            smoothMobile: true,
+            lerp: 0.09,
+            multiplier: 4
             })
 
             const overlay = document.querySelector('.loading-screen')
