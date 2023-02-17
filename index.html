@@ -537,10 +537,28 @@
             var scroll = new LocomotiveScroll({
             el: document.querySelector('[data-scroll-container]'),
             smooth: true,
-            smoothMobile: true,
+            smartphone: {
+                smooth: true
+            },
+            tablet: {
+                smooth: true
+            },
             lerp: 0.09,
             multiplier: 4
             })
+
+            document.querySelector('[href="#home"]').addEventListener('click', ()=> {
+                scroll.scrollTo(document.querySelector('#home'))
+            }) 
+            document.querySelector('[href="#about"]').addEventListener('click', ()=> {
+                scroll.scrollTo(document.querySelector('#about'))
+            }) 
+            document.querySelector('[href="#discover"]').addEventListener('click', ()=> {
+                scroll.scrollTo(document.querySelector('#discover'))
+            }) 
+            document.querySelector('[href="#experience"]').addEventListener('click', ()=> {
+                scroll.scrollTo(document.querySelector('#experience'))
+            }) 
 
             const overlay = document.querySelector('.loading-screen')
             document.addEventListener('DOMContentLoaded', ()=>{
@@ -549,8 +567,9 @@
                     // const firstDot = document.querySelector(".indicatorContainer > div:nth-child(1)")
                     // gotoSlide(firstDot)
                     }, 50)
-    }
-)
+                }
+            )
+
         })();
     </script>
     
