@@ -311,7 +311,7 @@ input {
 
 .nav__menu {
     position: relative;
-    width: max(29rem, 50%)
+    /* width: max(29rem, 50%) */
 }
 /* add to Anki, 3*s - positve relative by default but fixed as certain breakpoint */
 
@@ -331,6 +331,7 @@ input {
     }
     .nav__item {
         margin-bottom: 2.5rem;
+        margin-right: 0rem;
     }
     
     .nav__list {
@@ -346,6 +347,7 @@ input {
     flex-flow: column nowrap;
     row-gap: 2.5rem;
 }
+
 
 
 .nav__link {
@@ -1010,6 +1012,12 @@ input {
 
     .nav__link {
         color: var(--white-color);
+    }
+
+    
+    .nav__item {
+        margin-bottom: 0rem;
+        margin-right: 2.5rem;
     }
 
     .nav__dark {
