@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <!-- ====CSS ====  .:. -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./css/media-queries.css">
     
     <title>Responsive Travel Website</title>
 </head>
 
-<body data-scroll-container>
+<body>
     <div class="loading-screen">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="loader">
             <g transform="translate(20 50)">
@@ -40,11 +39,11 @@
     </div>  
 
 <!-- ===== HEADER =====  :.. -->
-    <header data-scroll-section class="header" id="header">
+    <header class="header" id="header">
         <div id="header-bg" style="opacity: 0;"></div>
 
         <nav class="nav container">
-            <a href="#" class="nav__logo"><span>Qhawe</span><span>Travel</span></a>
+            <a href="#" class="nav__logo"><span>Qhawe</span><span>Travel</span><span>&reg</span></span></a>
 
             <div class="nav__toggle" id="nav-toggle">
                 <i class="ri-function-line"></i>
@@ -83,21 +82,19 @@
 <!-- ======= MAIN :.. ========= -->
     <main class="main">
         <!-- ============= Home .:.   =============== -->
-        <section data-scroll-section class="home" id="home">
+        <section class="home" id="home">
             <img src="./img/home1.webp" alt="home" class="home__img">
             <div class="home__container container grid">
                 <div class="home__data">
-                    <span data-scroll data-scroll-speed="3" class="home__data-subtitle">Discover Your Place</span> 
-                    <h1 data-scroll data-scroll-speed="1" 
-                        data-scroll-class="animate-from-left"
-                        data-scroll-repeat="true"
-                        class="home__data-title">
-                        Explore The <br> Most <b> Beautiful <br>  Beaches </b>
+                    <span class="home__data-subtitle">Discover Your Adventure</span> 
+                    <h1 class="home__data-title">
+                        <!-- Explore The <br> Most <b> Beautiful <br>  Beaches </b> -->
+                        Travel Beyond <br> Your <b> Wildest <br> Dreams</b>
                     </h1>
-                    <a data-scroll data-scroll-speed="3" href="#" class="button">Explore</a>
+                    <a href="#" class="button">Explore Now</a>
                 </div>
 
-                <div data-scroll data-scroll-speed="1" class="home__social">
+                <div class="home__social">
                     <a href="#" target="_blank" class="home__social-link">
                         <i class="ri-facebook-box-fill"></i>  
                     </a>
@@ -111,9 +108,9 @@
                     </a>
                 </div>
 
-                <div data-scroll data-scroll-speed="4" class="home__info">
+                <div class="home__info">
                     <div>
-                        <span class="home__info-title">5 Best Places to Visit</span>
+                        <span class="home__info-title">5 Best Places to Visit Today</span>
                         <a href="#" class="button button-flex button--link home__info-button">
                             More <i class="ri-arrow-right-line"></i>
                         </a>
@@ -127,31 +124,24 @@
         </section>
 
         <!-- ============= About  .:.   =============== -->
-        <section data-scroll-section class="about section" id="about">
+        <section class="about section" id="about">
             <div class="about__container container grid">
                 <div class="about__data">
-                    <h2 data-scroll 
-                        data-scroll-speed="1"
-                        data-scroll-class="animate-from-left"
-                        data-scroll-delay="0.10"
-                        class="section__title about__title">
-                        Book Your Ticket <br> To A World of Adventure
+                    <h2 class="section__title about__title">
+                        Experience the World <br> like Never Before
                     </h2>
-                    <p data-scroll data-scroll-speed="1" class="about__description">
+                    <p class="about__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, ea similique assumenda ipsum et omnis perspiciatis mollitia, repellendus quia dolorum asperiores eos dolore ad excepturi nihil necessitatibus, ullam est accusamus.
                     </p>
-                    <a data-scroll data-scroll-speed="2" href="#" class="button buttonShadow">Reserve A Place</a>
+                    <a href="#" class="button buttonShadow">Start Your Journey</a>
                             <!-- add to Anki, styled <a> tag as a button-->
                 </div>
 
                 <div class="about__img">
-                    <div data-scroll data-scroll-speed="-1" class="about__img-overlay">
+                    <div class="about__img-overlay">
                         <img src="./img/about1.webp" alt="about" class="about__img-one">
                     </div>
-                    <div 
-                        data-scroll data-scroll-speed="2" 
-                        data-scroll-delay="0.60"
-                        class="about__img-overlay">
+                    <div class="about__img-overlay">
                         <img src="./img/about2.webp" alt="about" class="about__img-two">
                     </div>
 
@@ -160,9 +150,9 @@
         </section>        
 
         <!-- ============= Discover Section .:.   =============== -->
-        <section data-scroll-section class="discover section" id="discover">
+        <section class="discover section" id="discover">
             <h2 class="section__title">
-                Discover The Most <br> Breathtaking Places
+                Craft Your Perfect Trip, <br>Your Way
                         <!-- add to Anki, using  <br> for line breaks -->
             </h2>
             <div class="discover__container container swiper mySwiper">
@@ -213,9 +203,9 @@
         </section>
 
         <!-- ============= Experience .:.   =============== -->
-        <section data-scroll-section class="experience section" id="experience">
+        <section class="experience section" id="experience">
             <h2 class="section__title">
-                Our World Class Experience <br> Guarantees You Perfection
+                Create Memories <br> to Last a Lifetime
             </h2>
             <div class="experience__container container grid">
                 <div class="experience__content grid">
@@ -251,7 +241,7 @@
         </section>
 
         <!-- ============= Video .:.   =============== -->
-        <section data-scroll-section class="video section" id="video">
+        <section class="video section" id="video">
             <h2 class="section__title">Video Tour</h2>
             <div class="video__container container">
                 <p class="video__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid eaque quibusdam nihil doloremque quasi minima d</p>
@@ -270,7 +260,7 @@
         </section>
 
         <!-- ============= Places .:.   =============== -->
-        <section data-scroll-section class="place section" id="place">
+        <section class="place section" id="place">
             <h2 class="section__title">Choose Your Adventure</h2>
             <div class="place__container container grid">
                 
@@ -388,7 +378,7 @@
         </section>
 
         <!-- ============= Subscribe .:.   =============== -->
-        <section data-scroll-section class="subscribe section">
+        <section class="subscribe section">
             <div class="subscribe__bg">
                 <div class="subscribe__container container">
                     <h2 class="section__title subscribe__title">
@@ -405,7 +395,7 @@
         </section>
 
         <!-- ============= Sponsors .:.   =============== -->
-        <section data-scroll-section class="sponsor section">
+        <section class="sponsor section">
             <div class="sponsor__container container grid">
                 
                 <div class="sponsor__content">
@@ -438,7 +428,7 @@
             <div class="footer__content grid">
                 <div class="footer__data">
                     <h3 class="footer__title">Travel</h3>
-                    <p class="footer__description">You choose the destination.<br> We provide you the experience. </p>
+                    <p class="footer__description">World's Best-Kept Secrets: <br> Craft Your Perfect Trip</p>
 
                     <div>
                         <a href="#" class="footer__social">
@@ -531,51 +521,9 @@
     </a>
 
     <!-- ============= Javascript .:.   =============== -->
-    <script src="./js/locomotive-scroll.min.js"></script>
-    <script>
-        (function () {
-            var scroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true,
-            smartphone: {
-                smooth: true
-            },
-            tablet: {
-                smooth: true
-            },
-            lerp: 0.09,
-            multiplier: 4
-            })
-
-            document.querySelector('[href="#home"]').addEventListener('click', ()=> {
-                scroll.scrollTo(document.querySelector('#home'))
-            }) 
-            document.querySelector('[href="#about"]').addEventListener('click', ()=> {
-                scroll.scrollTo(document.querySelector('#about'))
-            }) 
-            document.querySelector('[href="#discover"]').addEventListener('click', ()=> {
-                scroll.scrollTo(document.querySelector('#discover'))
-            }) 
-            document.querySelector('[href="#experience"]').addEventListener('click', ()=> {
-                scroll.scrollTo(document.querySelector('#experience'))
-            }) 
-
-            const overlay = document.querySelector('.loading-screen')
-            document.addEventListener('DOMContentLoaded', ()=>{
-                setTimeout( ()=> {
-                    overlay.style.display = 'none'
-                    // const firstDot = document.querySelector(".indicatorContainer > div:nth-child(1)")
-                    // gotoSlide(firstDot)
-                    }, 50)
-                }
-            )
-
-        })();
-    </script>
-    
-    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-
 </body> 
 </html>

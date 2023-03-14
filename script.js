@@ -1,4 +1,16 @@
-console.log('custom js loaded')  
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+    // console.log(e)
+})
+
+function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
 
 //  ========  Show Menu .:.  ==========
 
@@ -49,7 +61,7 @@ function scrollHeader() {
         header.style.opacity = 0.9
     }
 
-    console.log(`opacity is ${header.style.opacity}`)
+    // console.log(`opacity is ${header.style.opacity}`)
 }
 window.addEventListener('scroll', scrollHeader)
 

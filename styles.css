@@ -1,8 +1,5 @@
 /*  === Google Fonts ===  ..: */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Rubik:wght@300;400;500&display=swap');
-@import url('./css/locomotive-scroll.css');
-@import url('./css/media-queries.css');
-    /* add to Anki, 5*s */
 
 
 /* === Global Variables ===   ..: */
@@ -10,7 +7,7 @@
     --header-height: 3rem;
 
     --hue-color: 190;
-        /* add to Anki */
+        /* add to Anki, 5*s -  */
 
     /* HSL colors */
     --first-color: hsl(var(--hue-color), 64%, 22%);
@@ -65,19 +62,25 @@
 
     --shadow-5: 0 20px 25px hsla(var(--hue-color), 64%, 22%, .5);
     --shadow-2: 0 20px 25px hsla(var(--hue-color), 64%, 22%, .2);
-
-    /* == animation === */
-    --cubic-in-out: cubic-bezier(.52,.03,.33,.97); 
-    --cubic-out: cubic-bezier(.64,.02,.33,.97);
-
-    --transition-3: opacity 3s ease;
-    --transition-5: opacity 6s ease;
-    --transition-8: opacity 8s ease;
-    --transition-10: opacity 10s ease;
-    
 }
 
 
+
+/* ======  Scrollbar  ======  .:.*/
+
+body::-webkit-scrollbar {
+    width: .6rem;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--first-color);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: var(--text-color-light);    /* color of the scroll thumb */
+border-radius: 20px;       /* roundness of the scroll thumb */
+border: 3px solid var(--first-color);  /* creates padding around scroll thumb */
+}
 
 
 /* ======  Loading Screen  ======  .:.*/
@@ -94,30 +97,6 @@
 }
 
 
-/* Animations  .:. */
-.animate-from-left {
-    opacity: 1;
-}
-.animate-from-right {
-    opacity: 1;
-}
-.animate-from-top {
-    opacity: 1;
-}
-
-
-.section__title {
-    opacity: 1;
-    transition: var(--transition-5),
-}
-
-.home__data-title {
-    opacity: 1;
-    transition: var(--transition-3),
-}
-
-
-
 /* Large screen font sizing  .:. */
 @media screen and (min-width: 968px) {
     :root {
@@ -130,7 +109,6 @@
         --smaller-font-size: .813rem;
     }
 }
-    /* add to Anki, 10*s - responsive text */
 
 /* Dark theme Variables  .:. */
 body.dark-theme {
@@ -183,7 +161,7 @@ body.dark-theme {
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 body {
@@ -309,13 +287,18 @@ input {
 .nav__logo span:nth-child(2){
     font-weight: 900;
 }
+.nav__logo span:nth-child(3){
+        /* add to Anki, nth-child() */
+    font-size: 0.8rem;
+    margin-left: 0.05rem;
+}
 
 .nav__toggle {
     font-size: 1.2rem;
     cursor: pointer;
     transform: scale(1);
     transition: transform 300ms ease-in-out;
-        /* add transition on non-psuedo class to avoid jumping animation */
+        /* note: add transition on non-psuedo class to avoid jumping animation */
 }
 
 .nav__toggle:hover {
@@ -329,7 +312,7 @@ input {
 .nav__menu {
     position: relative;
 }
-/* add to Anki, positve relative by default but fixed as certain breakpoint */
+/* add to Anki, 3*s - positve relative by default but fixed as certain breakpoint */
 
 
 /* Mobile Menu  .:. */
@@ -341,7 +324,7 @@ input {
         right: -100%; /* add to Anki, use relative units */
         width: 50%;
         height: 100%;
-        box-shadow: -1px 0 4px hsla(var(--hue-color), 65%, 15%, .25); /* add to Anki, hsla */
+        box-shadow: -1px 0 4px hsla(var(--hue-color), 65%, 15%, .25); /* add to Anki, 3*s - hsla */
         padding: 3rem;
         transition: .4s;
     }
@@ -357,7 +340,7 @@ input {
 
 .nav__link {
     color: var(--text-color-light);
-        /* add to Anki, colour setup for hover effect */
+        /* add to Anki, 3*s - colour setup for hover effect */
     font-weight: var(--fontWeight-semi-bold);
     text-transform: uppercase;
     transition: color 250ms ease;
@@ -421,7 +404,7 @@ input {
     height: 100vh;
     object-fit: cover;
     object-position: 83%;
-        /* 3*s - add to Anki */
+        /* 3*s - add to Anki, index: background-position */
 }
 
 .home__container {
@@ -505,7 +488,7 @@ input {
 
 .button {
     display: inline-block;
-        /* add to Anki */
+        /* add to Anki, 3*s -  */
     background-color: var(--first-color);
     color: var(--white-color);
     padding: 1rem 2rem;
@@ -700,7 +683,7 @@ input {
 
 .place__container {
     grid-template-columns: repeat(2, max-content);
-        /* add to Anki */
+        /* add to Anki, 3*s -  */
     justify-content: center;
 }
 
@@ -807,7 +790,7 @@ input {
     color: var(--text-color);
     text-align: left;
 }
-    /* add to Anki, placeholder pseudo*/
+    /* add to Anki, 3*s - placeholder pseudo*/
 
 .subscribe__form .button {
     box-shadow: none;
@@ -825,7 +808,7 @@ input {
 .sponsor__img {
     width: 90px;
     filter: invert(.7);
-        /* add to Anki, makes imgs grayed-out */
+        /* add to Anki, 3*s - makes imgs grayed-out */
     transition: var(--img-transition);
 }
 
@@ -944,8 +927,6 @@ input {
 ::-webkit-scrollbar-thumb::hover {
     background-color: var(--text-color-light);
 }
-
-
 
 
 
